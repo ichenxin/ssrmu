@@ -429,8 +429,8 @@ Set_config_method(){
  ${Green_font_prefix}15.${Font_color_suffix} chacha20
  ${Green_font_prefix}16.${Font_color_suffix} chacha20-ietf
  ${Tip} salsa20/chacha20-*系列加密方式，需要额外安装依赖 libsodium ，否则会无法启动ShadowsocksR !" && echo
-	read -e -p "(默认: 5. aes-128-ctr):" ssr_method
-	[[ -z "${ssr_method}" ]] && ssr_method="5"
+	read -e -p "(默认: 16. chacha20-ietf):" ssr_method
+	[[ -z "${ssr_method}" ]] && ssr_method="16"
 	if [[ ${ssr_method} == "1" ]]; then
 		ssr_method="none"
 	elif [[ ${ssr_method} == "2" ]]; then
